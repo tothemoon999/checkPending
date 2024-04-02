@@ -1,0 +1,26 @@
+{
+  "name": "buyClone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tothemoon999/buyTest3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tothemoon999/buyTest3/issues"
+  },
+  "homepage": "https://github.com/tothemoon999/buyTest3#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dotenv": "^10.0.0",
+    "ethers": "^5.7.2",
+    "ws": "^8.12.0"
+  }
+}
