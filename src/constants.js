@@ -19,7 +19,7 @@ const gethProvider = new ethers.providers.JsonRpcProvider(
   'http://localhost:3306'
 );
 
-const gethWssProvider = new ethers.providers.JsonRpcProvider(
+const gethWssProvider = new ethers.providers.WebSocketProvider(
   'ws://localhost:8946'
 );
 
