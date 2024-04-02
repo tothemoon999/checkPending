@@ -4,6 +4,7 @@ const {
   provider,
   SignWallets,
   getID,
+  gethWssProvider,
 } = require("./src/constants.js");
 
 const {
@@ -49,4 +50,17 @@ const main = () => {
   });
 }
 
+const mainWithGeth = () => {
+  console.log('start checking');
+  gethWssProvider.on('pending', (hash) => {
+    console.log('geth pending hash', hash);
+  });
+
+  gethWssProvider.on('block', (blk) => {
+    console.log('geth blk', blk);
+  });
+}
+
 main();
+
+mainWithGeth();
