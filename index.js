@@ -39,7 +39,7 @@ const sleep = (ms) => {
 
 const main = () => {
 
-
+  console.log('start checking');
   wssProvider.on('pending', (hash) => {
     console.log('pending hash', hash);
   });
