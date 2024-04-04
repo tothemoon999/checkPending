@@ -40,12 +40,12 @@ const sleep = (ms) => {
 
 const main = () => {
 
-  console.log('start checking');
-  wssProvider.on('pending', (hash) => {
+  console.log('start checking pending');
+  provider.on('pending', (hash) => {
     console.log('pending hash', hash);
   });
 
-  wssProvider.on('block', (blk) => {
+  provider.on('block', (blk) => {
     console.log('blk', blk);
   });
 }
