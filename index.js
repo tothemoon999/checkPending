@@ -57,10 +57,14 @@ const mainWithGeth = async () => {
 
   console.log(b);
   gethWssProvider.on('pending', async (hash) => {
-    console.log('geth pending hash', hash);
+    // console.log('geth pending hash', hash);
 
     const tx = await gethWssProvider.getTransaction(hash);
-    console.log('tx====', tx);
+
+    if (tx && tx.chainId == 8453) {
+      console.log('tx====', tx);
+    }
+    
   });
 
   gethWssProvider.on('block', (blk) => {
