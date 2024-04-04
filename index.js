@@ -56,8 +56,11 @@ const mainWithGeth = async () => {
   const b = await gethWssProvider.getBalance('0x504200cfdba97de14fef8c24e193bdf1db3da0d4');
 
   console.log(b);
-  gethWssProvider.on('pending', (hash) => {
+  gethWssProvider.on('pending', async (hash) => {
     console.log('geth pending hash', hash);
+
+    const tx = await gethWssProvider.getTransaction(hash);
+    console.log('tx====', tx);
   });
 
   gethWssProvider.on('block', (blk) => {
