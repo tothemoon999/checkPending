@@ -41,11 +41,11 @@ const sleep = (ms) => {
 const main = () => {
 
   console.log('start checking pending');
-  provider.on('pending', (hash) => {
+  wssProvider.on('pending', (hash) => {
     console.log('pending hash', hash);
   });
 
-  provider.on('block', (blk) => {
+  wssProvider.on('block', (blk) => {
     console.log('blk', blk);
   });
 }
