@@ -70,4 +70,4 @@ const mainWithGeth = async () => {
 
 main();
 
-// mainWithGeth();
+mainWithGeth();
