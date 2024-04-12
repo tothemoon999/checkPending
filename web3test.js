@@ -2,6 +2,20 @@ const { Web3 } = require("web3");
 const { wssProvider } = require("./src/constants");
 var url = "wss://blue-burned-waterfall.base-mainnet.quiknode.pro/a3902e151ca0f57dcb0e8e12373b8aee92317ba9/";
 
+
+
+const origLog = console.log;
+console.log = function (obj, ...placeholders) {
+  if (typeof obj === "string")
+    placeholders.unshift("[" + new Date().toISOString() + "] " + obj);
+  else {
+    placeholders.unshift(obj);
+    placeholders.unshift("[" + new Date().toISOString() + "] %j");
+  }
+
+  origLog.apply(this, placeholders);
+};
+
 var options = {
     timeout: 30000,
     clientConfig: {
