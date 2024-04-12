@@ -1,5 +1,6 @@
 const { Web3 } = require("web3");
 const { wssProvider } = require("./src/constants");
+const ethers = require("ethers");
 var url = "wss://blue-burned-waterfall.base-mainnet.quiknode.pro/a3902e151ca0f57dcb0e8e12373b8aee92317ba9/";
 
 
@@ -63,6 +64,7 @@ var init = async () => {
     // });
 
 
+    
     const provider = new ethers.providers.JsonRpcProvider("https://blue-burned-waterfall.base-mainnet.quiknode.pro/a3902e151ca0f57dcb0e8e12373b8aee92317ba9/");
 
 
