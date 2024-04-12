@@ -62,7 +62,11 @@ var init = async () => {
     //     // });
     // });
 
-    const txpool = await wssProvider1.send("txpool_status");
+
+    const provider = new ethers.providers.JsonRpcProvider("https://blue-burned-waterfall.base-mainnet.quiknode.pro/a3902e151ca0f57dcb0e8e12373b8aee92317ba9/");
+
+
+    const txpool = await provider.send("txpool_status");
     console.log(txpool);
 
     wssProvider.on("block", (txHash) => {
