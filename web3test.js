@@ -48,19 +48,19 @@ var init = async () => {
     //     console.log("tx", tx); //this is confirmed transaction because it has block number in it
     // });
 
-    const subscription = await web3.eth.subscribe("eth_newPendingTransactionFilter");
-    subscription.on("data", (txHash) => {
+    // const subscription = await web3.eth.subscribe("eth_newPendingTransactionFilter");
+    // subscription.on("data", (txHash) => {
 
-        console.log(txHash.number.toString());
-        // setTimeout(async () => {
-        //     try {
-        //         let tx = await web3.eth.getTransaction(txHash);
-        //         console.log(tx)
-        //     } catch (err) {
-        //         console.error(err);
-        //     }
-        // });
-    });
+    //     console.log(txHash.number.toString());
+    //     // setTimeout(async () => {
+    //     //     try {
+    //     //         let tx = await web3.eth.getTransaction(txHash);
+    //     //         console.log(tx)
+    //     //     } catch (err) {
+    //     //         console.error(err);
+    //     //     }
+    //     // });
+    // });
 
     const txpool = await wssProvider1.send("txpool_status");
     console.log(txpool);
