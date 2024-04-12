@@ -36,7 +36,7 @@ var init = async () => {
     const subscription = await web3.eth.subscribe("newHeads");
     subscription.on("data", (txHash) => {
 
-        console.log(txHash);
+        console.log(txHash.number);
         // setTimeout(async () => {
         //     try {
         //         let tx = await web3.eth.getTransaction(txHash);
