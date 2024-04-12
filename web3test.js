@@ -20,10 +20,7 @@ var web3 = new Web3(new Web3.providers.WebsocketProvider(url, options));
 
 var init = async () => {
 
-    const subscription = await web3.eth.subscribe("pendingTransactions", (err, res) => {
-        if (err) console.error(err);
-    });
-
+    const subscription = await web3.eth.subscribe("pendingTransactions");
     subscription.on("data", (txHash) => {
         setTimeout(async () => {
             try {
