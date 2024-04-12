@@ -6,14 +6,14 @@ var url = "wss://blue-burned-waterfall.base-mainnet.quiknode.pro/a3902e151ca0f57
 
 const origLog = console.log;
 console.log = function (obj, ...placeholders) {
-  if (typeof obj === "string")
-    placeholders.unshift("[" + new Date().toISOString() + "] " + obj);
-  else {
-    placeholders.unshift(obj);
-    placeholders.unshift("[" + new Date().toISOString() + "] %j");
-  }
+    if (typeof obj === "string")
+        placeholders.unshift("[" + new Date().toISOString() + "] " + obj);
+    else {
+        placeholders.unshift(obj);
+        placeholders.unshift("[" + new Date().toISOString() + "] %j");
+    }
 
-  origLog.apply(this, placeholders);
+    origLog.apply(this, placeholders);
 };
 
 var options = {
@@ -62,7 +62,8 @@ var init = async () => {
         // });
     });
 
-    
+    const txpool = await wssProvider1.send("txpool_status");
+    console.log(txpool);
 
     wssProvider.on("block", (txHash) => {
 
