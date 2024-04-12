@@ -44,6 +44,23 @@ var init = async () => {
         //     }
         // });
     });
+
+    const blockSubscription = await web3.eth.subscribe("block");
+
+    subscription.on("data", (txHash) => {
+
+        console.log("Block", txHash);
+        // setTimeout(async () => {
+        //     try {
+        //         let tx = await web3.eth.getTransaction(txHash);
+        //         console.log(tx)
+        //     } catch (err) {
+        //         console.error(err);
+        //     }
+        // });
+    });
+
+
 };
 
 init();
