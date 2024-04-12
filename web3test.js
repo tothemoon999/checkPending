@@ -21,7 +21,7 @@ var web3 = new Web3(new Web3.providers.WebsocketProvider(url, options));
 var init = async () => {
 
     let subscription = await web3.eth.subscribe("logs", {
-        fromBlock: "pending",
+        fromBlock: "latest",
         address: ["0x0eD7e52944161450477ee417DE9Cd3a859b14fD0"],
         topics: [],
     });
