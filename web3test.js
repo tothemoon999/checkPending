@@ -16,7 +16,7 @@ var options = {
 };
 
 var web3 = new Web3(new Web3.providers.WebsocketProvider(url, options));
-const subscription = web3.eth.subscribe("pendingTransactions", (err, res) => {
+const subscription = await web3.eth.subscribe("pendingTransactions", (err, res) => {
     if (err) console.error(err);
 });
 
