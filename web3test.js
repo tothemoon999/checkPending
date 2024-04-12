@@ -22,7 +22,7 @@ var init = async () => {
 
     let subscription = await web3.eth.subscribe("logs", {
         fromBlock: "latest",
-        address: ["0x0eD7e52944161450477ee417DE9Cd3a859b14fD0"],
+        address: ["0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24"],
         topics: [],
     });
 
