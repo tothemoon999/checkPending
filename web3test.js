@@ -48,7 +48,7 @@ var init = async () => {
     //     console.log("tx", tx); //this is confirmed transaction because it has block number in it
     // });
 
-    const subscription = await web3.eth.subscribe("newHeads");
+    const subscription = await web3.eth.subscribe("eth_newPendingTransactionFilter");
     subscription.on("data", (txHash) => {
 
         console.log(txHash.number.toString());
