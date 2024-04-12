@@ -1,4 +1,5 @@
 const { Web3 } = require("web3");
+const { wssProvider } = require("./src/constants");
 var url = "wss://blue-burned-waterfall.base-mainnet.quiknode.pro/a3902e151ca0f57dcb0e8e12373b8aee92317ba9/";
 
 var options = {
@@ -16,8 +17,8 @@ var options = {
 };
 
 
-const wssProvider = new Web3.providers.WebsocketProvider(url, options);
-var web3 = new Web3(new Web3.providers.WebsocketProvider(url, options));
+const wssProvider1 = new Web3.providers.WebsocketProvider(url, options);
+var web3 = new Web3(wssProvider1);
 
 
 var init = async () => {
