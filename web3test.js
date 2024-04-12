@@ -15,6 +15,8 @@ var options = {
     },
 };
 
+
+const wssProvider = new Web3.providers.WebsocketProvider(url, options);
 var web3 = new Web3(new Web3.providers.WebsocketProvider(url, options));
 
 
@@ -45,9 +47,9 @@ var init = async () => {
         // });
     });
 
-    const blockSubscription = await web3.eth.subscribe("block");
+    
 
-    subscription.on("data", (txHash) => {
+    wssProvider.on("block", (txHash) => {
 
         console.log("Block", txHash);
         // setTimeout(async () => {
