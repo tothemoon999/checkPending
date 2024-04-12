@@ -33,14 +33,16 @@ var init = async () => {
 
     const subscription = await web3.eth.subscribe("newHeads");
     subscription.on("data", (txHash) => {
-        setTimeout(async () => {
-            try {
-                let tx = await web3.eth.getTransaction(txHash);
-                console.log(tx)
-            } catch (err) {
-                console.error(err);
-            }
-        });
+
+        console.log(txHash);
+        // setTimeout(async () => {
+        //     try {
+        //         let tx = await web3.eth.getTransaction(txHash);
+        //         console.log(tx)
+        //     } catch (err) {
+        //         console.error(err);
+        //     }
+        // });
     });
 };
 
