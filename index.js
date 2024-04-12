@@ -59,7 +59,7 @@ const main = async () => {
     console.log('pending hash', hash);
   });
 
-  provider.on('block', (blk) => {
+  wssProvider.on('block', (blk) => {
     console.log('blk', blk);
   });
 }
