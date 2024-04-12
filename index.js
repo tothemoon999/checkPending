@@ -55,7 +55,7 @@ const main = async () => {
   console.log(currentBlockNumber.toString())
   
   console.log('start checking pending');
-  provider.on('pending', (hash) => {
+  wssProvider.on('pending', (hash) => {
     console.log('pending hash', hash);
   });
 
