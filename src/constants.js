@@ -15,17 +15,17 @@ const wssProvider = new ethers.providers.WebSocketProvider(
 );
 
 
-const gethProvider = new ethers.providers.JsonRpcProvider(
-  'http://localhost:3306'
-);
+// const gethProvider = new ethers.providers.JsonRpcProvider(
+//   'http://localhost:3306'
+// );
 
-const gethWssProvider = new ethers.providers.WebSocketProvider(
-  'ws://localhost:8946'
-);
+// const gethWssProvider = new ethers.providers.WebSocketProvider(
+//   'ws://localhost:8946'
+// );
 
 exports.wssProvider = wssProvider;
 
-exports.gethWssProvider = gethWssProvider;
+exports.gethWssProvider = null; //gethWssProvider;
 const SignWallets = [];
 
 exports.SignWallets = SignWallets;
