@@ -52,7 +52,7 @@ const sleep = (ms) => {
 
 const main = async () => {
   const currentBlockNumber = await core.client.getBlockNumber();
-  console.log(currentBlockNumber)
+  console.log(currentBlockNumber.toString())
   
   console.log('start checking pending');
   provider.on('pending', (hash) => {
