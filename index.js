@@ -82,7 +82,7 @@ const mainWithGeth = async () => {
   });
 
   gethWssProvider.on('block', (blk) => {
-    console.log('geth blk', blk);
+    console.log('Ethereum Block', blk);
   });
 }
 
