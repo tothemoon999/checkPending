@@ -67,9 +67,9 @@ const main = async () => {
 const mainWithGeth = async () => {
   console.log('start checking');
 
-  const b = await gethWssProvider.getBalance('0x504200cfdba97de14fef8c24e193bdf1db3da0d4');
+  // const b = await gethWssProvider.getBalance('0x504200cfdba97de14fef8c24e193bdf1db3da0d4');
 
-  console.log(b);
+  // console.log(b);
   gethWssProvider.on('pending', async (hash) => {
     // console.log('geth pending hash', hash);
 
