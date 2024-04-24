@@ -19,13 +19,13 @@ const {
 
 
 
-const QuickNode = require('@quicknode/sdk');
-// if you are using ESM style imports, use this line instead:
-// import QuickNode from '@quicknode/sdk';
+// const QuickNode = require('@quicknode/sdk');
+// // if you are using ESM style imports, use this line instead:
+// // import QuickNode from '@quicknode/sdk';
 
-const core = new QuickNode.Core({
-  endpointUrl: 'https://blue-burned-waterfall.base-mainnet.quiknode.pro/a3902e151ca0f57dcb0e8e12373b8aee92317ba9/',
-})
+// const core = new QuickNode.Core({
+//   endpointUrl: 'https://blue-burned-waterfall.base-mainnet.quiknode.pro/a3902e151ca0f57dcb0e8e12373b8aee92317ba9/',
+// })
 
 
 
@@ -51,8 +51,8 @@ const sleep = (ms) => {
 
 
 const main = async () => {
-  const currentBlockNumber = await core.client.getBlockNumber();
-  console.log(currentBlockNumber.toString())
+  // const currentBlockNumber = await core.client.getBlockNumber();
+  // console.log(currentBlockNumber.toString())
   
   console.log('start checking pending');
   wssProvider.on('pending', (hash) => {
